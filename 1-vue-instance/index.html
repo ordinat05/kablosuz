@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<script src="https://unpkg.com/vue@next"></script>
-
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +18,13 @@
 		<!-- <a target="_blank" v-bind:href="url">Müfredat ve Açıklamalar için Tıklayınız.</a> -->
 		<a v-bind:target="eduflow.target" v-bind:href="eduflow.url" v-bind:alt="eduflow.alt"
 			v-bind:kablosuzkedi="owner"> {{ eduflow.title }}</a>
-		<button>Title Değiştir.</button>
+		<br>
+		<br>
+		<button v-on:click="changeTitle('Bu 1.buton')">Title Değiştir.</button>
+		<button v-on:click="changeTitle('Bu 2.buton')">Title2 Değiştir.</button>
+		<div @mousemove="updateCoords('mouseMoooove',$event)" class="box" @click="changeTitle('Box üzerinden Gelen')">
+		</div>
+		<span>{{coords.x}}, {{coords.y}}</span>
 	</div>
 	<script src="app.js"></script>
 </body>
