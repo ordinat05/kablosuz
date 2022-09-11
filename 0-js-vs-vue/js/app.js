@@ -20,7 +20,7 @@ input.addEventListener("keypress", function (event) {
 });
 
 listeyiSilBtn.addEventListener("click", () => {
-  document.getElementById("todoList").innerHTML = "";
+  document.getElementById("durum").innerHTML = "";
   alert("Liste Temizlendi");
 });
 
