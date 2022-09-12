@@ -22,7 +22,7 @@
 					<button @click="counter--" class="btn btn-sm btn-danger">-</button>
 				</div>
 				<div class="alert alert-warning mt-2" id="durum">
-					{{ getCounterResult() }} </div>
+					{{ getCounterResult }} </div>
 			</div>
 			<div class="col-2 card p-2">
 				<h3 class="text-center"> {{ counter2 }}</h3>
@@ -31,7 +31,14 @@
 					<button @click="counter2--" class="btn btn-sm btn-danger">-</button>
 				</div>
 				<div class="alert alert-warning mt-2" id="durum">
-					{{ getCounter2Result() }} </div>
+					{{ getCounter2Result }} </div>
+			</div>
+			<br>
+			<br>
+			<div class="col-4 card p-3">
+				<h1>{{ title }}</h1>
+				<p>{{ description }}</p>
+				<button @click="liked++">{{ liked }}</button>
 			</div>
 		</div><!-- .row.mt-5-->
 	</div> <!-- .container -->
