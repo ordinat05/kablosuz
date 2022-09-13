@@ -3,13 +3,20 @@ const app = Vue.createApp({
     return {
       search: "",
       itemList: ["elma", "armut", "kiraz", "çilek"],
+      // filteredList: [],
     };
   },
 
   methods: {
     searchList() {
-      const filteredList = this.itemList.filter((i) => i.includes(this.search));
-      console.log("Filtrelenmiş Liste : >>", filteredList);
+      // this.filteredList = this.itemList.filter((i) => i.includes(this.search));
+      // console.log("Filtrelenmiş Liste : >>", filteredList());
+    },
+  },
+  computed: {
+    filteredList() {
+      return this.itemList.filter((i) => i.includes(this.search));
+      comolist();
     },
   },
   // computed: {},
