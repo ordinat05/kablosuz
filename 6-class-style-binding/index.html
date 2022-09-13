@@ -14,8 +14,20 @@
 
 <body>
 	<div id="app">
-		<div class="box red border">
-			hello
+		<!-- {{ showBorder }} -->
+		<button @click="showBorder = !showBorder">Border Ekle / Ekleme</button>
+		<button @click="redBG = !redBG">redBG Ekle / Ekleme</button>
+		<!-- <div class="box" :class="{ border : showBorder, red : redBG }"></div> -->
+		<!-- <div class="box" :class="boxClasses"></div> -->
+		<!-- 🔺 Örnek 1 de kullanıldı. computed : { } ile yapmak. Koşula bağlı class bind  ederek yapmak.  -->
+		<br><br>
+		<input type="text" v-model="bgColor">{{bgColor}}
+		<br><br>
+		<input type="text" v-model="styleBorder">{{styleBorder}}
+		<br><br>
+		<input type="text" v-model="styleTextcolor">{{styleTextcolor}}
+		<br><br>
+		<div class="box" :style="{ backgroundColor:bgColor, border:styleBorder, color:styleTextcolor}"><b>Merhaba</b>
 		</div>
 	</div> <!-- .container -->
 	<script src="app.js"></script>
